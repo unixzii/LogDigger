@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA17D96221D75D48002C566D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA17D96121D75D48002C566D /* AppDelegate.m */; };
+		FA17D96421D75D49002C566D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA17D96321D75D49002C566D /* Assets.xcassets */; };
+		FA17D96721D75D49002C566D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA17D96521D75D49002C566D /* MainMenu.xib */; };
+		FA17D96A21D75D49002C566D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA17D96921D75D49002C566D /* main.m */; };
+		FA17D97621D75DAC002C566D /* LDGDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = FA17D97421D75DAC002C566D /* LDGDocument.m */; };
+		FA17D97721D75DAC002C566D /* LDGDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA17D97521D75DAC002C566D /* LDGDocument.xib */; };
+		FA17D97A21D75ED2002C566D /* LDGLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA17D97921D75ED2002C566D /* LDGLogModel.m */; };
+		FA17D97D21D7625A002C566D /* LDGLogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA17D97C21D7625A002C566D /* LDGLogItem.m */; };
+		FA17D98121D76C14002C566D /* LDGQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = FA17D98021D76C14002C566D /* LDGQuery.m */; };
+		FA17D98421D76C21002C566D /* LDGSimpleQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = FA17D98321D76C21002C566D /* LDGSimpleQuery.m */; };
+		FA17D98821D7B7C4002C566D /* LDGFilterSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA17D98621D7B7C4002C566D /* LDGFilterSettingsController.m */; };
+		FA17D98921D7B7C4002C566D /* LDGFilterSettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA17D98721D7B7C4002C566D /* LDGFilterSettingsController.xib */; };
+		FAC42A2A21E09E03002E910E /* LDGFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC42A2921E09E03002E910E /* LDGFilterController.m */; };
+		FAC42A2D21E0A815002E910E /* LDGFilterMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC42A2C21E0A815002E910E /* LDGFilterMatch.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA17D95D21D75D48002C566D /* LogDigger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogDigger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA17D96021D75D48002C566D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FA17D96121D75D48002C566D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FA17D96321D75D49002C566D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA17D96621D75D49002C566D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FA17D96821D75D49002C566D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA17D96921D75D49002C566D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA17D96B21D75D49002C566D /* LogDigger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LogDigger.entitlements; sourceTree = "<group>"; };
+		FA17D97321D75DAC002C566D /* LDGDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGDocument.h; sourceTree = "<group>"; };
+		FA17D97421D75DAC002C566D /* LDGDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGDocument.m; sourceTree = "<group>"; };
+		FA17D97521D75DAC002C566D /* LDGDocument.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LDGDocument.xib; sourceTree = "<group>"; };
+		FA17D97821D75ED2002C566D /* LDGLogModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGLogModel.h; sourceTree = "<group>"; };
+		FA17D97921D75ED2002C566D /* LDGLogModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGLogModel.m; sourceTree = "<group>"; };
+		FA17D97B21D7625A002C566D /* LDGLogItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGLogItem.h; sourceTree = "<group>"; };
+		FA17D97C21D7625A002C566D /* LDGLogItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGLogItem.m; sourceTree = "<group>"; };
+		FA17D97F21D76C14002C566D /* LDGQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGQuery.h; sourceTree = "<group>"; };
+		FA17D98021D76C14002C566D /* LDGQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGQuery.m; sourceTree = "<group>"; };
+		FA17D98221D76C21002C566D /* LDGSimpleQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGSimpleQuery.h; sourceTree = "<group>"; };
+		FA17D98321D76C21002C566D /* LDGSimpleQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGSimpleQuery.m; sourceTree = "<group>"; };
+		FA17D98521D7B7C4002C566D /* LDGFilterSettingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGFilterSettingsController.h; sourceTree = "<group>"; };
+		FA17D98621D7B7C4002C566D /* LDGFilterSettingsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGFilterSettingsController.m; sourceTree = "<group>"; };
+		FA17D98721D7B7C4002C566D /* LDGFilterSettingsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LDGFilterSettingsController.xib; sourceTree = "<group>"; };
+		FAC42A2821E09E03002E910E /* LDGFilterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGFilterController.h; sourceTree = "<group>"; };
+		FAC42A2921E09E03002E910E /* LDGFilterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGFilterController.m; sourceTree = "<group>"; };
+		FAC42A2B21E0A815002E910E /* LDGFilterMatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGFilterMatch.h; sourceTree = "<group>"; };
+		FAC42A2C21E0A815002E910E /* LDGFilterMatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGFilterMatch.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA17D95A21D75D48002C566D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA17D95421D75D48002C566D = {
+			isa = PBXGroup;
+			children = (
+				FA17D95F21D75D48002C566D /* LogDigger */,
+				FA17D95E21D75D48002C566D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA17D95E21D75D48002C566D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA17D95D21D75D48002C566D /* LogDigger.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA17D95F21D75D48002C566D /* LogDigger */ = {
+			isa = PBXGroup;
+			children = (
+				FA17D97121D75D61002C566D /* Core */,
+				FA17D97221D75D67002C566D /* View */,
+				FA17D96021D75D48002C566D /* AppDelegate.h */,
+				FA17D96121D75D48002C566D /* AppDelegate.m */,
+				FA17D96321D75D49002C566D /* Assets.xcassets */,
+				FA17D96521D75D49002C566D /* MainMenu.xib */,
+				FA17D96821D75D49002C566D /* Info.plist */,
+				FA17D96921D75D49002C566D /* main.m */,
+				FA17D96B21D75D49002C566D /* LogDigger.entitlements */,
+			);
+			path = LogDigger;
+			sourceTree = "<group>";
+		};
+		FA17D97121D75D61002C566D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FA17D97E21D76C01002C566D /* Query */,
+				FA17D97821D75ED2002C566D /* LDGLogModel.h */,
+				FA17D97921D75ED2002C566D /* LDGLogModel.m */,
+				FA17D97B21D7625A002C566D /* LDGLogItem.h */,
+				FA17D97C21D7625A002C566D /* LDGLogItem.m */,
+				FAC42A2B21E0A815002E910E /* LDGFilterMatch.h */,
+				FAC42A2C21E0A815002E910E /* LDGFilterMatch.m */,
+				FAC42A2821E09E03002E910E /* LDGFilterController.h */,
+				FAC42A2921E09E03002E910E /* LDGFilterController.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FA17D97221D75D67002C566D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA17D97321D75DAC002C566D /* LDGDocument.h */,
+				FA17D97421D75DAC002C566D /* LDGDocument.m */,
+				FA17D97521D75DAC002C566D /* LDGDocument.xib */,
+				FA17D98521D7B7C4002C566D /* LDGFilterSettingsController.h */,
+				FA17D98621D7B7C4002C566D /* LDGFilterSettingsController.m */,
+				FA17D98721D7B7C4002C566D /* LDGFilterSettingsController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA17D97E21D76C01002C566D /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				FA17D97F21D76C14002C566D /* LDGQuery.h */,
+				FA17D98021D76C14002C566D /* LDGQuery.m */,
+				FA17D98221D76C21002C566D /* LDGSimpleQuery.h */,
+				FA17D98321D76C21002C566D /* LDGSimpleQuery.m */,
+			);
+			name = Query;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA17D95C21D75D48002C566D /* LogDigger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA17D96E21D75D49002C566D /* Build configuration list for PBXNativeTarget "LogDigger" */;
+			buildPhases = (
+				FA17D95921D75D48002C566D /* Sources */,
+				FA17D95A21D75D48002C566D /* Frameworks */,
+				FA17D95B21D75D48002C566D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogDigger;
+			productName = LogDigger;
+			productReference = FA17D95D21D75D48002C566D /* LogDigger.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA17D95521D75D48002C566D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Cyandev;
+				TargetAttributes = {
+					FA17D95C21D75D48002C566D = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = FA17D95821D75D48002C566D /* Build configuration list for PBXProject "LogDigger" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA17D95421D75D48002C566D;
+			productRefGroup = FA17D95E21D75D48002C566D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA17D95C21D75D48002C566D /* LogDigger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA17D95B21D75D48002C566D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA17D96421D75D49002C566D /* Assets.xcassets in Resources */,
+				FA17D96721D75D49002C566D /* MainMenu.xib in Resources */,
+				FA17D98921D7B7C4002C566D /* LDGFilterSettingsController.xib in Resources */,
+				FA17D97721D75DAC002C566D /* LDGDocument.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA17D95921D75D48002C566D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA17D97D21D7625A002C566D /* LDGLogItem.m in Sources */,
+				FA17D96A21D75D49002C566D /* main.m in Sources */,
+				FA17D98821D7B7C4002C566D /* LDGFilterSettingsController.m in Sources */,
+				FA17D98421D76C21002C566D /* LDGSimpleQuery.m in Sources */,
+				FAC42A2A21E09E03002E910E /* LDGFilterController.m in Sources */,
+				FA17D98121D76C14002C566D /* LDGQuery.m in Sources */,
+				FA17D96221D75D48002C566D /* AppDelegate.m in Sources */,
+				FA17D97A21D75ED2002C566D /* LDGLogModel.m in Sources */,
+				FA17D97621D75DAC002C566D /* LDGDocument.m in Sources */,
+				FAC42A2D21E0A815002E910E /* LDGFilterMatch.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA17D96521D75D49002C566D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA17D96621D75D49002C566D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA17D96C21D75D49002C566D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FA17D96D21D75D49002C566D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FA17D96F21D75D49002C566D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LogDigger/LogDigger.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = LogDigger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyandev.LogDigger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FA17D97021D75D49002C566D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LogDigger/LogDigger.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = LogDigger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyandev.LogDigger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA17D95821D75D48002C566D /* Build configuration list for PBXProject "LogDigger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA17D96C21D75D49002C566D /* Debug */,
+				FA17D96D21D75D49002C566D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA17D96E21D75D49002C566D /* Build configuration list for PBXNativeTarget "LogDigger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA17D96F21D75D49002C566D /* Debug */,
+				FA17D97021D75D49002C566D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA17D95521D75D48002C566D /* Project object */;
+}
