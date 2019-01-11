@@ -10,8 +10,7 @@
                 <outlet property="filterTableView" destination="JXK-w1-qCO" id="jsP-Ar-w0m"/>
                 <outlet property="progressIndicator" destination="a3m-L9-a7p" id="TTj-Xc-gsf"/>
                 <outlet property="searchField" destination="GeQ-LW-iyC" id="yF8-SL-UbF"/>
-                <outlet property="searchFieldTrailConstraint" destination="6kU-KE-mIV" id="x9l-qO-Bpz"/>
-                <outlet property="searchFieldTrailingConstraint" destination="6kU-KE-mIV" id="FKh-zQ-sUa"/>
+                <outlet property="searchFieldTrailingConstraint" destination="6kU-KE-mIV" id="bdx-Qd-cvA"/>
                 <outlet property="statusView" destination="Qkx-VI-k3A" id="MwA-QD-U66"/>
                 <outlet property="tableView" destination="ixq-2o-omh" id="Qs2-xI-ZHJ"/>
                 <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>

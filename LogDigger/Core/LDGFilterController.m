@@ -85,6 +85,7 @@
     }
     
     // Cocoa-way to join a thread.
+    // FIXME: `NSOperation` to rescue?
     while (filterThread.executing) {
         usleep(1000);
     }
@@ -121,6 +122,9 @@ if (selfThread.cancelled) { \
     return; \
 }; do {} while (0)
     
+    /**
+     Batch the changes to avoid flooding the main thread.
+     */
     __block NSUInteger batchedSize = 0;
     NSMutableArray<LDGFilterMatch *> *buffer = [NSMutableArray arrayWithCapacity:1000];
     

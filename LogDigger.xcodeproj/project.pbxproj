@@ -19,6 +19,8 @@
 		FA17D98421D76C21002C566D /* LDGSimpleQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = FA17D98321D76C21002C566D /* LDGSimpleQuery.m */; };
 		FA17D98821D7B7C4002C566D /* LDGFilterSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA17D98621D7B7C4002C566D /* LDGFilterSettingsController.m */; };
 		FA17D98921D7B7C4002C566D /* LDGFilterSettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA17D98721D7B7C4002C566D /* LDGFilterSettingsController.xib */; };
+		FAAAE58A21E8E82300F9C0FC /* LDGProgressController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAAE58821E8E82300F9C0FC /* LDGProgressController.m */; };
+		FAAAE58B21E8E82300F9C0FC /* LDGProgressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAAE58921E8E82300F9C0FC /* LDGProgressController.xib */; };
 		FAC42A2A21E09E03002E910E /* LDGFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC42A2921E09E03002E910E /* LDGFilterController.m */; };
 		FAC42A2D21E0A815002E910E /* LDGFilterMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC42A2C21E0A815002E910E /* LDGFilterMatch.m */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,9 @@
 		FA17D98521D7B7C4002C566D /* LDGFilterSettingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGFilterSettingsController.h; sourceTree = "<group>"; };
 		FA17D98621D7B7C4002C566D /* LDGFilterSettingsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGFilterSettingsController.m; sourceTree = "<group>"; };
 		FA17D98721D7B7C4002C566D /* LDGFilterSettingsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LDGFilterSettingsController.xib; sourceTree = "<group>"; };
+		FAAAE58721E8E82300F9C0FC /* LDGProgressController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGProgressController.h; sourceTree = "<group>"; };
+		FAAAE58821E8E82300F9C0FC /* LDGProgressController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGProgressController.m; sourceTree = "<group>"; };
+		FAAAE58921E8E82300F9C0FC /* LDGProgressController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LDGProgressController.xib; sourceTree = "<group>"; };
 		FAC42A2821E09E03002E910E /* LDGFilterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGFilterController.h; sourceTree = "<group>"; };
 		FAC42A2921E09E03002E910E /* LDGFilterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGFilterController.m; sourceTree = "<group>"; };
 		FAC42A2B21E0A815002E910E /* LDGFilterMatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGFilterMatch.h; sourceTree = "<group>"; };
@@ -120,6 +125,9 @@
 				FA17D98521D7B7C4002C566D /* LDGFilterSettingsController.h */,
 				FA17D98621D7B7C4002C566D /* LDGFilterSettingsController.m */,
 				FA17D98721D7B7C4002C566D /* LDGFilterSettingsController.xib */,
+				FAAAE58721E8E82300F9C0FC /* LDGProgressController.h */,
+				FAAAE58821E8E82300F9C0FC /* LDGProgressController.m */,
+				FAAAE58921E8E82300F9C0FC /* LDGProgressController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +174,11 @@
 				TargetAttributes = {
 					FA17D95C21D75D48002C566D = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -195,6 +208,7 @@
 				FA17D96421D75D49002C566D /* Assets.xcassets in Resources */,
 				FA17D96721D75D49002C566D /* MainMenu.xib in Resources */,
 				FA17D98921D7B7C4002C566D /* LDGFilterSettingsController.xib in Resources */,
+				FAAAE58B21E8E82300F9C0FC /* LDGProgressController.xib in Resources */,
 				FA17D97721D75DAC002C566D /* LDGDocument.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +225,7 @@
 				FA17D98821D7B7C4002C566D /* LDGFilterSettingsController.m in Sources */,
 				FA17D98421D76C21002C566D /* LDGSimpleQuery.m in Sources */,
 				FAC42A2A21E09E03002E910E /* LDGFilterController.m in Sources */,
+				FAAAE58A21E8E82300F9C0FC /* LDGProgressController.m in Sources */,
 				FA17D98121D76C14002C566D /* LDGQuery.m in Sources */,
 				FA17D96221D75D48002C566D /* AppDelegate.m in Sources */,
 				FA17D97A21D75ED2002C566D /* LDGLogModel.m in Sources */,
@@ -348,7 +363,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LogDigger/LogDigger.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
@@ -366,7 +380,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LogDigger/LogDigger.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";

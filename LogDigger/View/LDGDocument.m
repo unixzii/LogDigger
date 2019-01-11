@@ -13,6 +13,7 @@
 #import "LDGSimpleQuery.h"
 #import "LDGFilterController.h"
 #import "LDGFilterMatch.h"
+#import "LDGProgressController.h"
 
 static NSString * const kLogTypeName = @"Log File";
 static NSString * const kLogCellIdentifier = @"LogCell";
@@ -51,16 +52,6 @@ static NSString * const kFilterCellIdentifier = @"FilterCell";
     return [typeName isEqualToString:kLogTypeName];
 }
 
-- (void)delete:(id)sender {
-    if (self.filterTableView == _window.firstResponder) {
-        LDGQuery *selectedQuery = self.filterController.queries[self.filterTableView.selectedRow];
-        [self.filterController removeFilterQuery:selectedQuery];
-        [self.filterTableView reloadData];
-        
-        [self.filterController triggerFiltering];
-    }
-}
-
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem {
     if (menuItem.action == @selector(delete:)) {
         if (self.tableView == _window.firstResponder) {
@@ -90,8 +81,27 @@ static NSString * const kFilterCellIdentifier = @"FilterCell";
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError {
+    NSAssert(![NSThread isMainThread], @"Unexpected thread to read from data.");
+    
+    __block LDGProgressController *progressController;
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        // UI related objects need to be manipulated on main thread.
+        progressController = [[LDGProgressController alloc]
+                              initWithWindowNibName:NSStringFromClass([LDGProgressController class])];
+        progressController.title = [NSString stringWithFormat:@"Opening \"%@\"",
+                                    self.fileURL.lastPathComponent];
+        progressController.informativeText = @"File is being processed, please wait...";
+        [progressController showWindow:nil];
+    });
+    
+#define SAFE_RELEASE(obj) \
+dispatch_async(dispatch_get_main_queue(), ^{ \
+    [(obj) close]; \
+})
+    
     NSString *content = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     if (!content) {
+        SAFE_RELEASE(progressController);
         return NO;
     }
     
@@ -101,7 +111,10 @@ static NSString * const kFilterCellIdentifier = @"FilterCell";
     self.filterController.delegate = self;
     self.filterController.includesUnmatchedItems = YES;
     
+    SAFE_RELEASE(progressController);
     return YES;
+    
+#undef SAFE_RELEASE
 }
 
 - (void)showFilterSettings:(id)sender {
@@ -178,6 +191,66 @@ finally:
     [self.filterController triggerFiltering];
 }
 
+#pragma mark - Responder actions
+
+- (void)copy:(id)sender {
+    __block BOOL firstLine = YES;
+    NSMutableString *string = [NSMutableString string];
+    
+#define APPEND_LINE(obj) \
+do { \
+    if (!firstLine) { \
+        [string appendString:@"\n"]; \
+    } \
+    [string appendString:(obj).lineText]; \
+    firstLine = NO; \
+} while (0)
+    
+    if (self.filterController.hasEffectiveQueries) {
+        [self.tableView.selectedRowIndexes enumerateIndexesUsingBlock:^(NSUInteger idx,
+                                                                        BOOL *stop) {
+            APPEND_LINE(self.currentMatches[idx].item);
+        }];
+    } else {
+        [self.tableView.selectedRowIndexes enumerateIndexesUsingBlock:^(NSUInteger idx,
+                                                                        BOOL *stop) {
+            APPEND_LINE(self.logModel.items[idx]);
+        }];
+    }
+    
+#undef APPEND_LINE
+    
+    NSPasteboard *pboard = [NSPasteboard generalPasteboard];
+    [pboard clearContents];
+    [pboard setString:string forType:NSPasteboardTypeString];
+}
+
+- (void)delete:(id)sender {
+    if (self.filterTableView == _window.firstResponder) {
+        LDGQuery *selectedQuery = self.filterController.queries[self.filterTableView.selectedRow];
+        [self.filterController removeFilterQuery:selectedQuery];
+        [self.filterTableView reloadData];
+        
+        [self.filterController triggerFiltering];
+    }
+}
+
+- (void)performFindPanelAction:(id)sender {
+    static const NSInteger kFindItemTag = 1;
+    static const NSInteger kFindNextItemTag = 2;
+    
+    NSMenuItem *menuItem;
+    if ([sender isKindOfClass:[NSMenuItem class]]) {
+        menuItem = sender;
+    }
+    
+    if (menuItem.tag == kFindNextItemTag) {
+        [self jumpToNextMatch:sender];
+    } else if (!menuItem || menuItem.tag == kFindItemTag) {
+        [self.searchField becomeFirstResponder];
+    }
+}
+
 #pragma mark - NSTableViewDelegate
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
@@ -212,6 +285,7 @@ finally:
         textField.alphaValue = 0.2;
     }
     
+    // FIXME: Is there a better way to get to know the cell is displaying?
     _maxColumnWidth = MAX(_maxColumnWidth, textField.fittingSize.width);
     [self _scheduleViewportAdjusting];
     
@@ -261,7 +335,7 @@ finally:
     [self _updateStatusView];
 }
 
-#pragma mark - Privates
+#pragma mark - Private methods
 
 - (void)_scheduleViewportAdjusting {
     if (_viewportAdjustingScheduled) {

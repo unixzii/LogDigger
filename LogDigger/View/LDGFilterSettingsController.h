@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LDGFilterSettingsController : NSViewController
 
 @property (weak) LDGQuery *query;
-@property (copy) void(^completionHandler)();
+@property (copy) void(^completionHandler)(void);
 
 @end
 

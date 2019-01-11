@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @class LDGLogItem;
 @class LDGQuery;
 
+/**
+ The filter match.
+ */
 @interface LDGFilterMatch : NSObject
 
 @property (strong) LDGLogItem *item;

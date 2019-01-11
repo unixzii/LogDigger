@@ -11,32 +11,20 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class LDGLogItem;
-@class LDGQuery;
-@class LDGLogModel;
-//
-//@protocol LDGLogModelDelegate <NSObject>
-//@optional
-//- (void)logModelDidFinishFiltering:(LDGLogModel *)logModel;
-//
-//@end
 
+/**
+ A model object to encapsulate the log.
+ */
 @interface LDGLogModel : NSObject
 
-//@property (weak) id<LDGLogModelDelegate> delegate;
-//@property (assign, nonatomic) BOOL showsMatchedItemsOnly;
-
 @property (readonly, copy) NSString *fullText;
+
+/**
+ An array containing the log items, delimited via line breaks.
+ */
 @property (readonly, copy) NSArray<LDGLogItem *> *items;
-//@property (readonly) NSUInteger numberOfItems;
-//@property (readonly) NSArray<LDGQuery *> *filterQueries;
-//@property (readonly) BOOL hasEffectiveFilters;
 
 - (instancetype)initWithString:(NSString *)string;
-
-//- (void)addFilterQuery:(LDGQuery *)query;
-//- (void)removeFilterQuery:(LDGQuery *)query;
-
-//- (LDGLogItem *)logItemAtIndex:(NSUInteger)index;
 
 @end
 
