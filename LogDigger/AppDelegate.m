@@ -24,5 +24,17 @@
     // Insert code here to tear down your application
 }
 
+- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename {
+    NSURL *URL = [NSURL fileURLWithPath:filename];
+    [[NSDocumentController sharedDocumentController]
+     openDocumentWithContentsOfURL:URL
+     display:YES
+     completionHandler:^(NSDocument * _Nullable document,
+                         BOOL documentWasAlreadyOpen,
+                         NSError * _Nullable error) {
+         // I don't care.
+     }];
+    return YES;
+}
 
 @end
