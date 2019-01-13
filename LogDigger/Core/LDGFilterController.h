@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @discussion The receiver will retain this object.
  */
-@property (strong) LDGLogModel *logModel;
+@property (strong, nonatomic) LDGLogModel *logModel;
 
 /**
  A Boolean value that determines whether filter needs to output the unmatched

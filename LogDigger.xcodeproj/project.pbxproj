@@ -21,7 +21,8 @@
 		FA17D98921D7B7C4002C566D /* LDGFilterSettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA17D98721D7B7C4002C566D /* LDGFilterSettingsController.xib */; };
 		FAAAE58A21E8E82300F9C0FC /* LDGProgressController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAAE58821E8E82300F9C0FC /* LDGProgressController.m */; };
 		FAAAE58B21E8E82300F9C0FC /* LDGProgressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAAE58921E8E82300F9C0FC /* LDGProgressController.xib */; };
-		FAC42A2A21E09E03002E910E /* LDGFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC42A2921E09E03002E910E /* LDGFilterController.m */; };
+		FAAAE58E21EB136900F9C0FC /* LDGFilterOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAAAE58D21EB136900F9C0FC /* LDGFilterOperation.mm */; };
+		FAC42A2A21E09E03002E910E /* LDGFilterController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAC42A2921E09E03002E910E /* LDGFilterController.mm */; };
 		FAC42A2D21E0A815002E910E /* LDGFilterMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC42A2C21E0A815002E910E /* LDGFilterMatch.m */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +52,11 @@
 		FAAAE58721E8E82300F9C0FC /* LDGProgressController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGProgressController.h; sourceTree = "<group>"; };
 		FAAAE58821E8E82300F9C0FC /* LDGProgressController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGProgressController.m; sourceTree = "<group>"; };
 		FAAAE58921E8E82300F9C0FC /* LDGProgressController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LDGProgressController.xib; sourceTree = "<group>"; };
+		FAAAE58C21EB136900F9C0FC /* LDGFilterOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGFilterOperation.h; sourceTree = "<group>"; };
+		FAAAE58D21EB136900F9C0FC /* LDGFilterOperation.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LDGFilterOperation.mm; sourceTree = "<group>"; };
+		FAAAE58F21EB170500F9C0FC /* LDGFilterWorkItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGFilterWorkItem.h; sourceTree = "<group>"; };
 		FAC42A2821E09E03002E910E /* LDGFilterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGFilterController.h; sourceTree = "<group>"; };
-		FAC42A2921E09E03002E910E /* LDGFilterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGFilterController.m; sourceTree = "<group>"; };
+		FAC42A2921E09E03002E910E /* LDGFilterController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LDGFilterController.mm; sourceTree = "<group>"; };
 		FAC42A2B21E0A815002E910E /* LDGFilterMatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGFilterMatch.h; sourceTree = "<group>"; };
 		FAC42A2C21E0A815002E910E /* LDGFilterMatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGFilterMatch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +115,10 @@
 				FAC42A2B21E0A815002E910E /* LDGFilterMatch.h */,
 				FAC42A2C21E0A815002E910E /* LDGFilterMatch.m */,
 				FAC42A2821E09E03002E910E /* LDGFilterController.h */,
-				FAC42A2921E09E03002E910E /* LDGFilterController.m */,
+				FAC42A2921E09E03002E910E /* LDGFilterController.mm */,
+				FAAAE58C21EB136900F9C0FC /* LDGFilterOperation.h */,
+				FAAAE58D21EB136900F9C0FC /* LDGFilterOperation.mm */,
+				FAAAE58F21EB170500F9C0FC /* LDGFilterWorkItem.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -221,10 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA17D97D21D7625A002C566D /* LDGLogItem.m in Sources */,
+				FAAAE58E21EB136900F9C0FC /* LDGFilterOperation.mm in Sources */,
 				FA17D96A21D75D49002C566D /* main.m in Sources */,
 				FA17D98821D7B7C4002C566D /* LDGFilterSettingsController.m in Sources */,
 				FA17D98421D76C21002C566D /* LDGSimpleQuery.m in Sources */,
-				FAC42A2A21E09E03002E910E /* LDGFilterController.m in Sources */,
+				FAC42A2A21E09E03002E910E /* LDGFilterController.mm in Sources */,
 				FAAAE58A21E8E82300F9C0FC /* LDGProgressController.m in Sources */,
 				FA17D98121D76C14002C566D /* LDGQuery.m in Sources */,
 				FA17D96221D75D48002C566D /* AppDelegate.m in Sources */,
