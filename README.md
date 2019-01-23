@@ -14,7 +14,7 @@ The missing log viewer for macOS.
 - Blazing fast large document filtering that never block your works.
 - Style customization supports for filtered results.
 - Jumping between filter results.
-- ...ant lots of cool stuff is coming soon!
+- ...and lots of cool stuff is coming soon!
 
 ## Install
 
